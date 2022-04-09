@@ -1,5 +1,6 @@
 package cwiczenia2.zad5;
 
+
 import java.time.Duration;
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -17,10 +18,8 @@ public class book {
     private boolean isAvailable;
     private Person author;
     private Person borrowedBy;
-    private static List<Book> allBooks;
 
-    public Book() {
-    }
+
 
     public Book(String name, Genre genre, Language language, LocalDate publishDate, Person author) {
         this.name = name;
@@ -43,14 +42,6 @@ public class book {
         borrowedBy = null;
     }
 
-    public static List<Book> findBookByGenre(Genre genre){
-        List<Book> result = new ArrayList<>();
-        for(Book book : allBooks){
-            if(book.getGenre() == genre)
-                result.add(book);
-        }
-        return result;
-    }
 
     public String getName() {return name;}
     public void setName(String name) {
